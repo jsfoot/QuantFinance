@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quant_finance/pages/page_1.dart';
+import 'package:quant_finance/pages/page_2.dart';
+import 'package:quant_finance/pages/page_3.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -11,6 +14,19 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   double groupAligment = -1;
   NavigationRailLabelType labelType = NavigationRailLabelType.all;
+
+  Widget buildPages() {
+    switch (_selectedIndex) {
+      case 0:
+        return const Page1();
+      case 1:
+        return const Page2();
+      case 2:
+        return const Page3();
+      default:
+        return const Page1();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,16 +62,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ],
             ),
-            Expanded(
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('selectedIndex: $_selectedIndex'),
-                  ],
-                ),
-              ),
-            ),
+            Expanded(child: buildPages()),
           ],
         ),
       ),
