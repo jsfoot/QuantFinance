@@ -15,19 +15,6 @@ class _MainScreenState extends State<MainScreen> {
   double groupAligment = -1;
   NavigationRailLabelType labelType = NavigationRailLabelType.all;
 
-  Widget buildPages() {
-    switch (_selectedIndex) {
-      case 0:
-        return const Page1();
-      case 1:
-        return const Page2();
-      case 2:
-        return const Page3();
-      default:
-        return const Page1();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +49,24 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ],
             ),
-            Expanded(child: buildPages()),
+            Expanded(
+              child: Stack(
+                children: [
+                  Offstage(
+                    offstage: _selectedIndex != 0,
+                    child: const Page1(),
+                  ),
+                  Offstage(
+                    offstage: _selectedIndex != 1,
+                    child: const Page2(),
+                  ),
+                  Offstage(
+                    offstage: _selectedIndex != 2,
+                    child: const Page3(),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

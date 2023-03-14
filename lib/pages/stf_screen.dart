@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Page1 extends StatefulWidget {
-  const Page1({Key? key}) : super(key: key);
+class StfScreen extends StatefulWidget {
+  const StfScreen({Key? key}) : super(key: key);
 
   @override
-  State<Page1> createState() => _Page1State();
+  State<StfScreen> createState() => _StfScreenState();
 }
 
-class _Page1State extends State<Page1> {
+class _StfScreenState extends State<StfScreen> {
   int _clicks = 0;
 
   void _increase() {

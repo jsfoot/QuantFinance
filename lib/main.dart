@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quant_finance/main_screen.dart';
+import 'package:quant_finance/main_navigation_screen.dart';
 
 void main() {
   runApp(const QuantFinanceApp());
@@ -10,9 +10,11 @@ class QuantFinanceApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
       title: "Quant Finance",
-      home: MainScreen(),
+      home: const MainScreen(),
     );
   }
 }
