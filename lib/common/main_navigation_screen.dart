@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:quant_finance/pages/page_1.dart';
-import 'package:quant_finance/pages/page_2.dart';
-import 'package:quant_finance/pages/page_3.dart';
+import 'package:quant_finance/views/binance_chart_screen.dart';
+import 'package:quant_finance/views/home_screen.dart';
+import 'package:quant_finance/views/indicator_settings_screen.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+class MainNavigationScreen extends StatefulWidget {
+  const MainNavigationScreen({Key? key}) : super(key: key);
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainNavigationScreen> createState() => _MainNavigationScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
+class _MainNavigationScreenState extends State<MainNavigationScreen> {
+  int _selectedIndex = 1;
   double groupAligment = -1;
   NavigationRailLabelType labelType = NavigationRailLabelType.all;
 
@@ -33,19 +33,25 @@ class _MainScreenState extends State<MainScreen> {
               trailing: const Icon(Icons.more_horiz_rounded),
               destinations: const <NavigationRailDestination>[
                 NavigationRailDestination(
-                  icon: Icon(Icons.favorite_border),
-                  selectedIcon: Icon(Icons.favorite),
-                  label: Text('First'),
-                ),
-                NavigationRailDestination(
                   icon: Icon(Icons.bookmark_border),
                   selectedIcon: Icon(Icons.book),
-                  label: Text('Second'),
+                  label: Text('Home'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.auto_graph_sharp),
+                  selectedIcon: Icon(Icons.auto_graph_outlined),
+                  label: Text(
+                    'Binance\nChart',
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 NavigationRailDestination(
                   icon: Icon(Icons.star_border),
                   selectedIcon: Icon(Icons.star),
-                  label: Text('Third'),
+                  label: Text(
+                    'Indicator\nSetting',
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ],
             ),
@@ -54,15 +60,15 @@ class _MainScreenState extends State<MainScreen> {
                 children: [
                   Offstage(
                     offstage: _selectedIndex != 0,
-                    child: const Page1(),
+                    child: const HomeScreen(),
                   ),
                   Offstage(
                     offstage: _selectedIndex != 1,
-                    child: const Page2(),
+                    child: const BinanceChartScreen(),
                   ),
                   Offstage(
                     offstage: _selectedIndex != 2,
-                    child: const Page3(),
+                    child: const IndicatorSettingsScreen(),
                   ),
                 ],
               ),

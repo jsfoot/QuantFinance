@@ -1,13 +1,14 @@
+
 import 'package:flutter/material.dart';
 
-class Page1 extends StatefulWidget {
-  const Page1({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<Page1> createState() => _Page1State();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _Page1State extends State<Page1> {
+class _HomeScreenState extends State<HomeScreen> {
   int _clicks = 0;
 
   void _increase() {
