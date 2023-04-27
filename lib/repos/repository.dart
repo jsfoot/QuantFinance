@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:candlesticks/candlesticks.dart';
 import 'package:http/http.dart' as http;
+import 'package:quant_finance/candle_sticks/lib/candlesticks.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 class BinanceRepository {

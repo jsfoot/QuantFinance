@@ -1,12 +1,14 @@
 import 'dart:convert';
 
-import 'package:candlesticks/candlesticks.dart';
+import 'package:quant_finance/candle_sticks/lib/candlesticks.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quant_finance/constants/gaps.dart';
 import 'package:quant_finance/constants/sizes.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
-
+import 'package:quant_finance/candle_sticks/lib/src/utils/indicators/horizontal_price_line.dart';
+import 'package:quant_finance/candle_sticks/lib/src/utils/indicators/moving_average_indicator_by_high_and_low.dart';
+import 'package:quant_finance/candle_sticks/lib/src/utils/indicators/moving_average_indicator_by_low.dart';
 import '../models/candle_ticker_model.dart';
 import '../repos/repository.dart';
 
@@ -59,6 +61,19 @@ class _BinanceChartScreenState extends State<BinanceChartScreen> {
     MovingAverageIndicator(
       length: 20,
       color: Colors.blue,
+    ),
+    MovingAverageIndicatorByLow(
+      length: 10,
+      color: Colors.yellowAccent,
+    ),
+    MovingAverageIndicatorByHighAndLow(
+      length: 10,
+      colorLow: Colors.black,
+      colorHigh: Colors.red,
+    ),
+    HorizontalPriceLine(
+      price: 29000,
+      color: Colors.black,
     ),
   ];
   final GlobalKey<FormState> _maKey = GlobalKey<FormState>();

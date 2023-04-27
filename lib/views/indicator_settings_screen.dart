@@ -1,8 +1,4 @@
-import 'dart:convert';
-
-import 'package:candlesticks/candlesticks.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class IndicatorSettingsScreen extends StatefulWidget {
   const IndicatorSettingsScreen({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:candlesticks/candlesticks.dart';
+import 'package:quant_finance/candle_sticks/lib/candlesticks.dart';
 
 class CandleTickerModel {
   final int eventTime;
