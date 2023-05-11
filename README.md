@@ -3,13 +3,14 @@
 
 # 목차
 
+
 # 1. 프로젝트 개요
 Application for Crypto Currency Trading
 - Candle Sticks Chart of all crypto currency data of binance(all symbols and intervals)
 - Indicators (Moving Average, Bolliget Band, Price line etc)
 - Custom Indicators and Signal Indicator : Create own indicator and trading signal
 
-
+## Screenshots
 
 ## 1.2 요구사항
 
