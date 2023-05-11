@@ -1,16 +1,38 @@
-# quant_finance
+# Quant Trading System(작성중)
 
-A new Flutter project.
 
-## Getting Started
+# 목차
 
-This project is a starting point for a Flutter application.
+# 1. 프로젝트 개요
+Application for Crypto Currency Trading
+- Candle Sticks Chart of all crypto currency data of binance(all symbols and intervals)
+- Indicators (Moving Average, Bolliget Band, Price line etc)
+- Custom Indicators and Signal Indicator : Create own indicator and trading signal
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 1.2 요구사항
+
+### 기술적 요구사항
+
+## 1.2 프로젝트 기능소개
+
+# 2. 프로젝트 구조
+
+## 2.1 프로젝트 전체 구조
+
+## 2.2 패키지별 구조
+
+## 2.3 Backend 구조
+- Base : Market data fetching from Binance API
+- Custom DB : Python and GraphQL API
+
+
+## 2.4 Frontend 구조
+- Flutter
+
+## 2.5 commom 구조
+
+# 3. 마치며
+
+# Reference
