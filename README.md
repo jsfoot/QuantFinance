@@ -22,6 +22,7 @@ Application for Crypto Currency Trading
 ## 2.1 프로젝트 전체 구조
 
 ## 2.2 패키지별 구조
+- candlesticks
 
 ## 2.3 Backend 구조
 - Base : Market data fetching from Binance API
@@ -36,3 +37,4 @@ Application for Crypto Currency Trading
 # 3. 마치며
 
 # Reference
+https://github.com/r-mzy47/binance_candles
